@@ -7,7 +7,7 @@ const SearchBar = () => {
   const [guests, setGuests] = useState("");
 
   return (
-    <div className="w-[600px] bg-white shadow-md h-[65px] rounded-full flex justify-center">
+    <div className="w-full md:w-[600px] bg-white shadow-md h-[65px] rounded-full flex justify-center">
       <div className="w-1/2 flex flex-col rounded-full justify-center p-6 hover:bg-gray-100 transition duration-250">
         <p className="font-medium text-sm">Location</p>
         <input
