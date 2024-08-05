@@ -22,7 +22,6 @@ export default function PersonalInfo() {
   const [editingInfo, setEditingInfo] = useState<any>(null);
   const [editedValue, setEditedValue] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const GOOGLE_MAPS_API_KEY = "AIzaSyC3o1apYVyLZnKgzMXyIYderjJED2NxWR8";
 
   const PERSONAL_INFO = [
     {
@@ -150,7 +149,7 @@ export default function PersonalInfo() {
                   <Label htmlFor="name" className="text-right">
                     {editingInfo?.label}
                   </Label>
-                  {editingInfo?.label === "Address" ? (
+                  {/* {editingInfo?.label === "Address" ? (
                     <AutoComplete
                       apiKey={GOOGLE_MAPS_API_KEY}
                       onPlaceSelected={(place) =>
@@ -158,14 +157,14 @@ export default function PersonalInfo() {
                       }
                       className="col-span-3"
                     />
-                  ) : (
-                    <Input
-                      id="name"
-                      value={editedValue}
-                      className="col-span-3"
-                      onChange={handleValueChange}
-                    />
-                  )}
+                  ) : ( */}
+                  <Input
+                    id="name"
+                    value={editedValue}
+                    className="col-span-3"
+                    onChange={handleValueChange}
+                  />
+                  {/* )} */}
                 </div>
               </div>
               {editingInfo?.label &&
