@@ -58,8 +58,11 @@ const RegisterForm = ({ isOpen }: { isOpen: boolean }) => {
         user.password,
         user.name
       );
-
+      window.dispatchEvent(new Event("userChange"));
       await account.createEmailPasswordSession(user.email, user.password);
+      await account.createVerification(
+        "http://localhost:3000/email-verification"
+      );
 
       console.log({ newUser });
       setError("");

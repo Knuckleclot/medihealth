@@ -32,7 +32,7 @@ export default function Component() {
             {user?.name}, <span className="font-normal">{user?.email}</span>
           </p>
         ) : (
-          <Skeleton className="h-6 w-1/3" />
+          <Skeleton className="h-7 w-1/3" />
         )}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
