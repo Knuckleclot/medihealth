@@ -75,3 +75,7 @@
     @apply py-[100px] sm:py-40
   }
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
