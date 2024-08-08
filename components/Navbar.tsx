@@ -11,6 +11,7 @@ import UserNavbarMenu from "./UserNavbarMenu";
 import { account } from "@/appwrite.config";
 import ResetPasswordForm from "./forms/ResetForm";
 import { cn } from "@/lib/utils";
+import { REGISTER_PATHS } from "@/lib/data";
 
 const Navbar = () => {
   const [user, setUser] = useState<any>(null);
@@ -46,6 +47,7 @@ const Navbar = () => {
   const searchParams = useSearchParams();
   const login = searchParams.get("login");
   const register = searchParams.get("register");
+  const clinicRegister = searchParams.get("clinic-register");
   const reset = searchParams.get("reset");
 
   return (
@@ -54,6 +56,7 @@ const Navbar = () => {
         "fixed w-full bg-white/60 backdrop-blur-xl h-20 left-0 right-0 top-0 paddingX flex justify-between items-center max-w-7xl mx-auto",
         {
           "max-w-none": path === "/",
+          hidden: REGISTER_PATHS.includes(path),
         }
       )}
     >

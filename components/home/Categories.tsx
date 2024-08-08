@@ -19,8 +19,9 @@ const Categories = () => {
           className={cn(
             "flex flex-col gap-2 items-center cursor-pointer group hover:border-b-2 pb-2",
             {
-              "border-b-2 border-b-black/80":
-                selectedCategory == category.category.toLowerCase(),
+              "border-b-2 border-b-black/80": category.category
+                .toLowerCase()
+                .includes(selectedCategory),
             }
           )}
           onClick={() =>

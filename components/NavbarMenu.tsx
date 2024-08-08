@@ -26,7 +26,9 @@ const NavbarMenu = () => {
           Sign up
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Apply</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => router.push("/clinic/register")}>
+          Apply as a clinic
+        </DropdownMenuItem>
         <DropdownMenuItem>Subscribe</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -37,4 +37,26 @@ export const LoginSchema = z.object({
   });
 
 
-  
+  export const ClinicRegisterSchema = z.object({
+    clinicName: z.string().min(1, {
+      message: "Clinic name is required",
+    }),
+    email: z.string().email({
+      message: "Valid email is required",
+    }),
+    password: z.string().min(8, {
+      message: "Password must be at least 8 characters long",
+    }),
+    location: z.string().min(1, {
+      message: "Location is required",
+    }),
+    workingHours: z.string().min(1, {
+      message: "Working hours are required",
+    }),
+    contactNumber: z.string().min(10, {
+      message: "Valid contact number is required",
+    }),
+    description: z.string().optional(),
+    website: z.string().url().optional(),
+    image: z.string().optional(),
+  });

@@ -14,9 +14,8 @@ const SearchedClinics = () => {
 
   return (
     <div>
-      {CLINIC_CATEGORIES.filter(
-        (clinicCategory) =>
-          selectedCategory === clinicCategory.category.toLowerCase()
+      {CLINIC_CATEGORIES.filter((clinicCategory) =>
+        clinicCategory.category.toLowerCase().includes(selectedCategory)
       ).map((category, index) => (
         <div
           key={index}

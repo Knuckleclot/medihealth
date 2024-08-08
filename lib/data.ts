@@ -167,4 +167,21 @@ export const ACCOUNT_SETTINGS = [
       ],
     },
   ];
+
+  export const REGISTER_PATHS = ['/clinic/register',]
+  
+  export const CLINIC_REGISTER_FEATURES = [
+    {
+      title: "Get Started Quickly",
+      description: "Easily register your clinic on MedISearch and connect with patients in your area. Manage appointments, showcase your services, and grow your practice with minimal setup.",
+    },
+    {
+      title: "Support Your Clinic's Needs",
+      description: "Whether you're a dental practice, physiotherapy center, or any other healthcare provider, MedISearch offers a unified platform to manage patient bookings, clinic information, and much more.",
+    },
+    {
+      title: "Join a Trusted Network",
+      description: "MedISearch is trusted by clinics and healthcare providers across Macedonia, from small practices to larger medical centers. Become part of a growing community dedicated to enhancing patient care.",
+    },
+  ];
   
